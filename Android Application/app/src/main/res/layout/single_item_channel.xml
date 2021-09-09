@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_single_item"
+        layout="@layout/single_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/AddHashtag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_add_hashtag"
+            android:text="Add Hashtag"
+            android:textColor="@color/app_color"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_weight="0.33"
+            android:onClick="AddHashtag" />
+
+        <TextView
+            android:id="@+id/RemoveHashtag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_remove_hashtag"
+            android:text="Remove Hashtag"
+            android:textColor="@color/app_color"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_weight="0.33"
+            android:onClick="RemoveHashtag" />
+
+        <TextView
+            android:id="@+id/DeleteVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_delete_video"
+            android:text="Delete Video"
+            android:textColor="@color/app_color"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_weight="0.33" />
+
+    </LinearLayout>
+
+</LinearLayout>

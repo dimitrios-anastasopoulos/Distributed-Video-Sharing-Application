@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UploadActivity">
+
+    <include
+        android:id="@+id/include_top_app_layout"
+        layout="@layout/top_app_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/include_bottom_app_layout"
+        layout="@layout/bottom_app_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="bottom"/>
+
+
+    <EditText
+        android:id="@+id/videoNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:hint="Video Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include_top_app_layout" />
+
+    <EditText
+        android:id="@+id/hashtagsEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:hint="Hashtags (e.g. #life #joy #smile)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/videoNameEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/subscribeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/app_color"
+        android:text="@string/uploadText"
+        android:textColor="@color/text_color_in_app_color"
+        android:onClick="channelActivity"
+        app:layout_constraintBottom_toTopOf="@id/include_bottom_app_layout"
+        app:layout_constraintEnd_toEndOf="@id/hashtagsEditText"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@id/hashtagsEditText"
+        app:layout_constraintTop_toBottomOf="@id/hashtagsEditText"
+        app:layout_constraintVertical_bias="0.173" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

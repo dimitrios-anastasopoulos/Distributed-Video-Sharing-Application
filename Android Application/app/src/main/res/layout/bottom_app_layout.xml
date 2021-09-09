@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_app_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:visibility="visible"
+    android:layout_gravity="center">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/down_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_down_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/homeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@color/app_color"
+                android:clickable="true"
+                android:focusable="true"
+                android:maxWidth="34dp"
+                android:maxHeight="34dp"
+                android:onClick="homeActivity"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/home_page_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginLeft="28dp"
+                android:autofillHints="search"
+                android:hint="Search channel or hashtag"
+                android:inputType="text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/homeButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageButton
+                android:id="@+id/search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:adjustViewBounds="true"
+                android:background="@color/app_color"
+                android:maxWidth="20dp"
+                android:maxHeight="20dp"
+                android:onClick="searchActivity"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/search_icon"
+                app:layout_constraintBottom_toBottomOf="@id/search_bar"
+                app:layout_constraintStart_toEndOf="@id/search_bar"
+                app:layout_constraintTop_toTopOf="@id/search_bar"
+                app:layout_constraintVertical_bias="0.64" />
+
+            <ImageButton
+                android:id="@+id/uploadButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:adjustViewBounds="true"
+                android:background="@color/app_color"
+                android:clickable="true"
+                android:focusable="true"
+                android:maxWidth="34dp"
+                android:maxHeight="34dp"
+                android:onClick="uploadVideoActivity"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/upload_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.833"
+                app:layout_constraintStart_toEndOf="@id/search_button"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.454" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

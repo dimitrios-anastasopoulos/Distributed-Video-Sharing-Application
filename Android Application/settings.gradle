@@ -1,0 +1,2 @@
+rootProject.name = "Uni-Tok"
+include ':app'
